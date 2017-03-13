@@ -249,10 +249,14 @@ class Affiliate_WP_Referrals_DB extends Affiliate_WP_DB  {
 	 *
 	 * @param string $column  Column name. See get_columns().
 	 * @param string $context Optional. Context for which to retrieve a referral. Default empty.
-	 * @return object|null Database query result object or null on failure.
+	 * @return object|false Database query result object or false on failure.
 	*/
 	public function get_by( $column, $row_id, $context = '' ) {
 		global $wpdb;
+
+		if( empty( $column ) || empty( $row_id ) ) {
+			return false;
+		}
 
 		$and = '';
 		if( ! empty( $context ) ) {
