@@ -25,7 +25,7 @@ class Tests extends UnitTestCase {
 	public function setUp() {
 		parent::setUp();
 
-		$this->mockRegistry = $this->getMockForAbstractClass( \AffWP\Utils\Registry::class );
+		$this->mockRegistry = $this->getMockForAbstractClass( '\AffWP\Utils\Registry' );
 	}
 
 	/**
