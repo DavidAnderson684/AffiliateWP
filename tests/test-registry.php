@@ -4,7 +4,7 @@ namespace AffWP\Utils\Registry;
 use AffWP\Tests\UnitTestCase;
 
 /**
- * Tests for the Labs API.
+ * Tests for the Registry API.
  *
  * @group registry
  * @group utils
@@ -12,7 +12,7 @@ use AffWP\Tests\UnitTestCase;
 class Tests extends UnitTestCase {
 
 	/**
-	 * Labs test fixture.
+	 * Mock registry test fixture.
 	 *
 	 * @access protected
 	 * @var    \AffWP\Utils\Registry
