@@ -20,22 +20,7 @@ class Registry extends Utils\Registry {
 	 * @access public
 	 * @since  2.0.5
 	 */
-	public function init() {
-		$this->register_core_upgrades();
-	}
-
-	/**
-	 * Registers core upgrade routines.
-	 *
-	 * @access public
-	 * @since  2.0.5
-	 */
-	public function register_core_upgrades() {
-		$this->add_upgrade( 'upgrade_v20_recount_unpaid_earnings', array(
-			'version' => '2.0',
-			'compare' => '<'
-		) );
-	}
+	public function init() {}
 
 	/**
 	 * Adds an upgrade to the registry.
