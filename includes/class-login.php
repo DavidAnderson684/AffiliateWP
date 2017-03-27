@@ -69,6 +69,14 @@ class Affiliate_WP_Login {
 			$this->add_error( 'no_such_user', __( 'No such user', 'affiliate-wp' ) );
 		}
 
+		/**
+		 * Allow extensions to authenticate via a different mechanism
+		 *
+		 * @since 2.0.6
+		 *
+		 * @param boolean Whether to check the password or not
+		 * @param WP_User $user The WordPress user whose password is being checked.
+		 */
 		if ( apply_filters( 'affwp_login_check_password', true, $user ) ) {
 			
 			if ( empty( $_POST['affwp_user_pass'] ) ) {
